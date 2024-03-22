@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js-task-2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <!-- task 1   Validation form with Js  -->
+  <div>
+    <h1 class="contact">Contact Us</h1>
+    <span id="error" ></span>
+    <form action="facebook.html"  method="post" id="myForm" onsubmit="formValidate(event);" novalidate>
+      <input type="text" placeholder="userName" name="userName" id="userName"><br>
+      <input type="email" placeholder="Email Address" name="email" id="email"><br>
+      <input type="number"  placeholder="phone" name="phone" id="phone"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+
+<br><hr><br>
+  <!-- task 2  Create a clock with Js -->
+
+  <h1 style="text-align: center;">Current Time:</h1>
+  <div  id="clock"></div>
+
+  <br><hr><br>
+
+  <!-- task 3 Create a stop watch with Js -->
+
+  <h1 style="text-align: center;">Stopwatch</h1>
+  <div id="s_clock">00:00:00</div>
+  <div id="buttons">
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="stopStopwatch()">Stop</button>
+    <button onclick="resetStopwatch()">Reset</button>
+  </div>
+
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>

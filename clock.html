@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clock</title>
+  <style>
+    #clock {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Current Time:</h1>
+  <div id="clock"></div>
+
+  <script>
+    function updateTime() {
+      const clockElement = document.getElementById("clock");
+      const currentTime = new Date();
+
+      const hours = currentTime.getHours();
+      const minutes = currentTime.getMinutes();
+      const seconds = currentTime.getSeconds();
+
+      const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+      clockElement.textContent = formattedTime;
+    }
+
+    function padZero(value) {
+      return value.toString().padStart(2, "0");
+    }
+
+    updateTime(); // Initial call to display current time
+
+    // Update the time every second
+    // The setInterval() method is used to execute a function repeatedly at specified time intervals
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
